@@ -1,0 +1,26 @@
+{
+    "sourceFile": "app/dashboard/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1707142446205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707143667647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n-const Inde = () => {\r\n+const Index = () => {\r\n   return (\r\n     <div>page</div>\r\n   )\r\n }\r\n \r\n\\ No newline at end of file\n-export default page\n+export default Index\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707144279573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n     <div>\r\n         <h1>Hellow rold</h1>\r\n         <h1>Hellow rold</h1>\r\n         <h1>Hellow rold</h1>\r\n+        <h1>Hellow rold</h1>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1707142446205,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst page = () => {\r\n  return (\r\n    <div>page</div>\r\n  )\r\n}\r\n\r\nexport default page"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "sourceFile": "app/dashboard/components/Topbar.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1707144314868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707144341776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const Topbar = () => {\r\n   return (\r\n-    <div>Topbar</div>\r\n+    <div className=''>Topbar</div>\r\n   )\r\n }\r\n \r\n export default Topbar\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707144349556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const Topbar = () => {\r\n   return (\r\n-    <div className=''>Topbar</div>\r\n+    <div className='pl-80'>Topbar</div>\r\n   )\r\n }\r\n \r\n export default Topbar\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707144368130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const Topbar = () => {\r\n   return (\r\n-    <div className='pl-80'>\r\n+    <div className=' w-pl-80'>\r\n         Topbar\r\n         </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1707144471518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Topbar = () => {\r\n   return (\r\n     <div className=' flex  p-6 w-full border-2 pl-80'>\r\n-        <h1>H</h1>\r\n+        <h1>He</h1>\r\n         </div>\r\n   )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1707144314868,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Topbar = () => {\r\n  return (\r\n    <div>Topbar</div>\r\n  )\r\n}\r\n\r\nexport default Topbar"
+        }
+    ]
+}

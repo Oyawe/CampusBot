@@ -1,0 +1,26 @@
+{
+    "sourceFile": "app/dashboard/components/Menu.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1707193270094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707193314284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const Menu = () => {\r\n   return (\r\n    <div  >\r\n                         \r\n-                            <div className='cursor-pointer border-b-2 py-1  border-black px-8'>\r\n+       <div className='cursor-pointer border-b-2 py-1  border-black px-8'>\r\n                                 <Link href=\"/\">Profile</Link>\r\n                             </div>\r\n \r\n                             <div className='cursor-pointer   px-8'>Logout</div>\r\n"
+                },
+                {
+                    "date": 1707193319012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n        <div className='cursor-pointer border-b-2 py-1  border-black px-8'>\r\n         <Link href=\"/\">Profile</Link>\r\n         </div>\r\n \r\n-                            <div className='cursor-pointer   px-8'>Logout</div>\r\n+        <div className='cursor-pointer   px-8'>Logout</div>\r\n                         \r\n-                    </div>\r\n+        </div>\r\n   )\r\n }\r\n \r\n export default Menu\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1707193270094,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

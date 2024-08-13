@@ -1,0 +1,34 @@
+{
+    "sourceFile": "app/dashboard/components/Card.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1707164188667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707164195300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,9 @@\n-rafce\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+const Card = () => {\r\n+  return (\r\n+    <div>Card</div>\r\n+  )\r\n+}\r\n+\r\n+export default Card\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707164446409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const Card = () => {\r\n   return (\r\n-    <div>Card</div>\r\n+    <div  flex items-center flex-row-reverse justify-between  shadow-lg  p-4 w-full  pl-40 lg:pl-72'>>Card</div>\r\n   )\r\n }\r\n \r\n export default Card\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707164576379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const Card = () => {\r\n   return (\r\n-    <div class >Card</div>\r\n+    <div classN >Card</div>\r\n   )\r\n }\r\n \r\n export default Card\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707164984765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n     <div className='flex shadow-md border-3 p-5 ' >Card</div>\r\n   )\r\n }\r\n \r\n-export default Car\n\\ No newline at end of file\n+export default Card\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1707164188667,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

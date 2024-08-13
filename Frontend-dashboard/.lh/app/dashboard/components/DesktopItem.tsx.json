@@ -1,0 +1,54 @@
+{
+    "sourceFile": "app/dashboard/components/DesktopItem.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1707146073765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707149488269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,33 @@\n-rafce\n\\ No newline at end of file\n+'use client'\r\n+\r\n+import React from 'react'\r\n+import clsx from \"clsx\"\r\n+import Link from \"next/link\"\r\n+\r\n+\r\n+type DesktopItemProps={\r\n+label:string\r\n+icon : any\r\n+href:string\r\n+onClick?:()=>void;\r\n+active?:boolean\r\n+}\r\n+const DesktopItem:React.FC<DesktopItemProps> = ({label,icon:Icon,href,onClick,active}) => {\r\n+  const handleClick=()=>{\r\n+    if(onClick){\r\n+      return onClick()\r\n+    }\r\n+  }\r\n+  return (\r\n+    <li onClick={handleClick} >\r\n+<Link href={href} className={clsx(`\r\n+    group flex gap-x-3 rounded-md p-3 text-sm leading-6 font-semibold text-gray-500 hover:text-black hover:bg-gray-100\r\n+`,active && \"bg-gray-100 text-black\")}>\r\n+  <Icon className={`h-6 w-6  shrink-0 ${active ? \"text-black\":\"text-gray-500\"} hover:text-black`}/>\r\n+    <span className='sr-only'>{label}</span>\r\n+</Link>\r\n+    </li>\r\n+  )\r\n+}\r\n+\r\n+export default DesktopItem\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707149497775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n 'use client'\r\n \r\n import React from 'react'\r\n-import clsx from \"clsx\"\r\n+\r\n import Link from \"next/link\"\r\n \r\n \r\n type DesktopItemProps={\r\n@@ -19,9 +19,9 @@\n     }\r\n   }\r\n   return (\r\n     <li onClick={handleClick} >\r\n-<Link href={href} className={clsx(`\r\n+<Link href={href} className={`\r\n     group flex gap-x-3 rounded-md p-3 text-sm leading-6 font-semibold text-gray-500 hover:text-black hover:bg-gray-100\r\n `,active && \"bg-gray-100 text-black\")}>\r\n   <Icon className={`h-6 w-6  shrink-0 ${active ? \"text-black\":\"text-gray-500\"} hover:text-black`}/>\r\n     <span className='sr-only'>{label}</span>\r\n"
+                },
+                {
+                    "date": 1707149507858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   return (\r\n     <li onClick={handleClick} >\r\n <Link href={href} className={`\r\n     group flex gap-x-3 rounded-md p-3 text-sm leading-6 font-semibold text-gray-500 hover:text-black hover:bg-gray-100\r\n-`,active && \"bg-gray-100 text-black\")}>\r\n+`}>\r\n   <Icon className={`h-6 w-6  shrink-0 ${active ? \"text-black\":\"text-gray-500\"} hover:text-black`}/>\r\n     <span className='sr-only'>{label}</span>\r\n </Link>\r\n     </li>\r\n"
+                },
+                {
+                    "date": 1707149528748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   return (\r\n     <li onClick={handleClick} >\r\n <Link href={href} className={`\r\n     group flex gap-x-3 rounded-md p-3 text-sm leading-6 font-semibold text-gray-500 hover:text-black hover:bg-gray-100\r\n-`}>\r\n+`,active && \"bg-gray-100 text-black\")}>\r\n   <Icon className={`h-6 w-6  shrink-0 ${active ? \"text-black\":\"text-gray-500\"} hover:text-black`}/>\r\n     <span className='sr-only'>{label}</span>\r\n </Link>\r\n     </li>\r\n"
+                },
+                {
+                    "date": 1707149547541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   return (\r\n     <li onClick={handleClick} >\r\n <Link href={href} className={`\r\n     group flex gap-x-3 rounded-md p-3 text-sm leading-6 font-semibold text-gray-500 hover:text-black hover:bg-gray-100\r\n-`,active && \"bg-gray-100 text-black\")}>\r\n+`}>\r\n   <Icon className={`h-6 w-6  shrink-0 ${active ? \"text-black\":\"text-gray-500\"} hover:text-black`}/>\r\n     <span className='sr-only'>{label}</span>\r\n </Link>\r\n     </li>\r\n"
+                },
+                {
+                    "date": 1707149578814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,12 +20,11 @@\n   }\r\n   return (\r\n     <li onClick={handleClick} >\r\n <Link href={href} className={`\r\n-    group flex gap-x-3 rounded-md p-3 text-sm leading-6 font-semibold text-gray-500 hover:text-black hover:bg-gray-100\r\n-`}>\r\n+    group flex gap-x-3 rounded-md p-3 text-sm leading-6 font-semibold text-gray-500 hover:text-black hover:bg-gray-100`}>\r\n   <Icon className={`h-6 w-6  shrink-0 ${active ? \"text-black\":\"text-gray-500\"} hover:text-black`}/>\r\n-    <span className='sr-only'>{label}</span>\r\n+    <span className=''>{label}</span>\r\n </Link>\r\n     </li>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1707149720117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,13 +19,9 @@\n     }\r\n   }\r\n   return (\r\n     <li onClick={handleClick} >\r\n-<Link href={href} className={`\r\n-    group flex gap-x-3 rounded-md p-3 text-sm leading-6 font-semibold text-gray-500 hover:text-black hover:bg-gray-100`}>\r\n-  <Icon className={`h-6 w-6  shrink-0 ${active ? \"text-black\":\"text-gray-500\"} hover:text-black`}/>\r\n-    <span className=''>{label}</span>\r\n-</Link>\r\n+\r\n     </li>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707149727017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     }\r\n   }\r\n   return (\r\n     <li onClick={handleClick} >\r\n-        <Link>\r\n+        <Link></Link>\r\n     </li>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707149853073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     }\r\n   }\r\n   return (\r\n     <li onClick={handleClick} >\r\n-        <Link className=' hover:text-white' href={href}>\r\n+        <Link className=' ghover:text-white' href={href}>\r\n          <Icon className={`h-6 w-6  shrink-0 ${active ? \"text-black\":\"text-gray-500\"} `}/>\r\n         </Link>\r\n     </li>\r\n   )\r\n"
+                }
+            ],
+            "date": 1707146073765,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

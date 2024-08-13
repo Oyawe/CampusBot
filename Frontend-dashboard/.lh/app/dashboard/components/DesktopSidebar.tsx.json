@@ -1,0 +1,174 @@
+{
+    "sourceFile": "app/dashboard/components/DesktopSidebar.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 39,
+            "patches": [
+                {
+                    "date": 1707143276994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707143330227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n 'use client'\r\n \r\n import React,{useState} from 'react'\r\n-import useRoutes from '@/app/hooks/useRoute' \r\n-import DesktopItem from './DesktopItem'\r\n-import { User } from '@prisma/client'\r\n-import Avatar from \"./Avatar\"\r\n+// import useRoutes from '@/app/hooks/useRoute' \r\n+// import DesktopItem from './DesktopItem'\r\n+// import { User } from '@prisma/client'\r\n+// import Avatar from \"./Avatar\"\r\n \r\n interface DesktopSidebarProps{\r\n   currentUser:User\r\n }\r\n"
+                },
+                {
+                    "date": 1707143336548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n interface DesktopSidebarProps{\r\n   currentUser:User\r\n }\r\n const DesktopSidebar:React.FC<DesktopSidebarProps> = ({currentUser}) => {\r\n-  const routes=useRoutes()\r\n+//   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n   console.log(currentUser)\r\n   return (\r\n     <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-20\r\n"
+                },
+                {
+                    "date": 1707143350619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n-            {routes.map((item)=>(\r\n+            {/* {routes.map((item)=>(\r\n               <DesktopItem key={item.label} icon={item.icon} href={item.href} label={item.label} onClick={item.onClick} active={item.active}/>\r\n-            ))}\r\n+            ))} */}\r\n         </ul>\r\n        \r\n       </nav>\r\n \r\n"
+                },
+                {
+                    "date": 1707143365281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n // import DesktopItem from './DesktopItem'\r\n // import { User } from '@prisma/client'\r\n // import Avatar from \"./Avatar\"\r\n \r\n-interface DesktopSidebarProps{\r\n-  currentUser:User\r\n-}\r\n+// interface DesktopSidebarProps{\r\n+//   currentUser:User\r\n+// }\r\n const DesktopSidebar:React.FC<DesktopSidebarProps> = ({currentUser}) => {\r\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n   console.log(currentUser)\r\n"
+                },
+                {
+                    "date": 1707143531572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n // interface DesktopSidebarProps{\r\n //   currentUser:User\r\n // }\r\n-const DesktopSidebar:React.FC<DesktopSidebarProps> = ({currentUser}) => {\r\n+const DesktopSidebar:React.FC<DesktopSidebarProps> = () => {\r\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n   console.log(currentUser)\r\n   return (\r\n"
+                },
+                {
+                    "date": 1707143538713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,12 @@\n \r\n // interface DesktopSidebarProps{\r\n //   currentUser:User\r\n // }\r\n-const DesktopSidebar:React.FC<DesktopSidebarProps> = () => {\r\n+const DesktopSidebar = () => {\r\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n-  console.log(currentUser)\r\n+ \r\n   return (\r\n     <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-20\r\n     xl:px-6 lg:overflow-y-auto lg:bg-white lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n"
+                },
+                {
+                    "date": 1707143546722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,13 +27,13 @@\n        \r\n       </nav>\r\n \r\n       <nav className='mt-4 flex flex-col justify-between items-center'>\r\n-            <div\r\n+            {/* <div\r\n             className='cursor-pointer hover:opacity-75 trabsition'\r\n             onClick={()=>setIsOpen(true)}>\r\n                 <Avatar user={currentUser}/>\r\n-            </div>\r\n+            </div> */}\r\n       </nav>\r\n \r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1707143598421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n             {/* {routes.map((item)=>(\r\n               <DesktopItem key={item.label} icon={item.icon} href={item.href} label={item.label} onClick={item.onClick} active={item.active}/>\r\n             ))} */}\r\n+            hey\r\n         </ul>\r\n        \r\n       </nav>\r\n \r\n"
+                },
+                {
+                    "date": 1707143616433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n             {/* {routes.map((item)=>(\r\n               <DesktopItem key={item.label} icon={item.icon} href={item.href} label={item.label} onClick={item.onClick} active={item.active}/>\r\n             ))} */}\r\n-            hey\r\n+            \r\n         </ul>\r\n        \r\n       </nav>\r\n \r\n"
+                },
+                {
+                    "date": 1707143920863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,9 @@\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n-            {/* {routes.map((item)=>(\r\n-              <DesktopItem key={item.label} icon={item.icon} href={item.href} label={item.label} onClick={item.onClick} active={item.active}/>\r\n-            ))} */}\r\n+           <li>H</li>\r\n             \r\n         </ul>\r\n        \r\n       </nav>\r\n"
+                },
+                {
+                    "date": 1707143968534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,15 +13,17 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-20\r\n+    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-40\r\n     xl:px-6 lg:overflow-y-auto lg:bg-white lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n-           <li>H</li>\r\n+           <li>Hello world</li>\r\n+           <li>Hello world</li>\r\n+           <li>Hello world</li>\r\n             \r\n         </ul>\r\n        \r\n       </nav>\r\n"
+                },
+                {
+                    "date": 1707143985063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-40\r\n+    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-96\r\n     xl:px-6 lg:overflow-y-auto lg:bg-white lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n"
+                },
+                {
+                    "date": 1707143994439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-96\r\n+    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-\r\n     xl:px-6 lg:overflow-y-auto lg:bg-white lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n"
+                },
+                {
+                    "date": 1707144026576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-\r\n+    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-7\r\n     xl:px-6 lg:overflow-y-auto lg:bg-white lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n"
+                },
+                {
+                    "date": 1707144041660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-7\r\n+    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-74\r\n     xl:px-6 lg:overflow-y-auto lg:bg-white lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n"
+                },
+                {
+                    "date": 1707144051558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-74\r\n-    xl:px-6 lg:overflow-y-auto lg:bg-white lg:border-r-[1px] lg:pb-4 lg:flex\r\n+    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-72\r\n+    xl:px-6 lg:overflow-y-auto lg:bg-blue- lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n"
+                },
+                {
+                    "date": 1707144120501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-72\r\n-    xl:px-6 lg:overflow-y-auto lg:bg-blue- lg:border-r-[1px] lg:pb-4 lg:flex\r\n+    <div className=\" lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-72\r\n+    xl:px-6 lg:overflow-y-auto lg:bg-blue-500 lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n"
+                },
+                {
+                    "date": 1707144133459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\" lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-72\r\n+    <div className=\" w- lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-72\r\n     xl:px-6 lg:overflow-y-auto lg:bg-blue-500 lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n"
+                },
+                {
+                    "date": 1707144143790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\" w- lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-72\r\n-    xl:px-6 lg:overflow-y-auto lg:bg-blue-500 lg:border-r-[1px] lg:pb-4 lg:flex\r\n+    <div className=\" w-24 lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-72\r\n+    xl:px-6 lg:overflow-y-autobg-blue-500 lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n"
+                },
+                {
+                    "date": 1707144164357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\" w-24 lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-72\r\n-    xl:px-6 lg:overflow-y-autobg-blue-500 lg:border-r-[1px] lg:pb-4 lg:flex\r\n+    <div className=\" w-24 fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-72\r\n+    xl:px-6 lg:overflow-y-auto bg-blue-500 lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n"
+                },
+                {
+                    "date": 1707144173619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\" w-24 fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-72\r\n+    <div className=\" w-24 fixed inset-y-0 left-0 lg:z-40 lg:w-72\r\n     xl:px-6 lg:overflow-y-auto bg-blue-500 lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n"
+                },
+                {
+                    "date": 1707144188129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n     <div className=\" w-24 fixed inset-y-0 left-0 lg:z-40 lg:w-72\r\n-    xl:px-6 lg:overflow-y-auto bg-blue-500 lg:border-r-[1px] lg:pb-4 lg:flex\r\n+    px-6 overflow-y-auto bg-blue-500 lg:border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n"
+                },
+                {
+                    "date": 1707144194241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n     <div className=\" w-24 fixed inset-y-0 left-0 lg:z-40 lg:w-72\r\n-    px-6 overflow-y-auto bg-blue-500 lg:border-r-[1px] lg:pb-4 lg:flex\r\n+    px-6 overflow-y-auto bg-blue-500 border-r-[1px] lg:pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n"
+                },
+                {
+                    "date": 1707144200785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n     <div className=\" w-24 fixed inset-y-0 left-0 lg:z-40 lg:w-72\r\n-    px-6 overflow-y-auto bg-blue-500 border-r-[1px] lg:pb-4 lg:flex\r\n+    px-6 overflow-y-auto bg-blue-500 border-r-[1px] pb-4 lg:flex\r\n      lg:flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n"
+                },
+                {
+                    "date": 1707144209208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n     <div className=\" w-24 fixed inset-y-0 left-0 lg:z-40 lg:w-72\r\n-    px-6 overflow-y-auto bg-blue-500 border-r-[1px] pb-4 lg:flex\r\n-     lg:flex-col justify-between \">\r\n+    px-6 overflow-y-auto bg-blue-500 border-r-[1px] pb-4 flex\r\n+     flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n            <li>Hello world</li>\r\n"
+                },
+                {
+                    "date": 1707144219564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\" w-24 fixed inset-y-0 left-0 lg:z-40 lg:w-72\r\n+    <div className=\" w-32 fixed inset-y-0 left-0 lg:z-40 lg:w-72\r\n     px-6 overflow-y-auto bg-blue-500 border-r-[1px] pb-4 flex\r\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n"
+                },
+                {
+                    "date": 1707144262991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\" w-32 fixed inset-y-0 left-0 lg:z-40 lg:w-72\r\n+    <div className=\" w-32 fixed inset-y-0 left-0 z-40 lg:w-72\r\n     px-6 overflow-y-auto bg-blue-500 border-r-[1px] pb-4 flex\r\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n"
+                },
+                {
+                    "date": 1707144404256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\" w-32 fixed inset-y-0 left-0 z-40 lg:w-72\r\n+    <div className=\" w-32 fixed inset-y-0 left-0 z-40 lg:w-64\r\n     px-6 overflow-y-auto bg-blue-500 border-r-[1px] pb-4 flex\r\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n"
+                },
+                {
+                    "date": 1707145205451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n //   const routes=useRoutes()\r\n   const [isOpen,setIsOpen]=useState(false)\r\n  \r\n   return (\r\n-    <div className=\" w-32 fixed inset-y-0 left-0 z-40 lg:w-64\r\n+    <div className=\" w-32 fixed inset-y-0 left-0 z-40 lg:w-60\r\n     px-6 overflow-y-auto bg-blue-500 border-r-[1px] pb-4 flex\r\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n"
+                },
+                {
+                    "date": 1707145778445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n+           <li class>Hello world</li>\r\n            <li>Hello world</li>\r\n            <li>Hello world</li>\r\n-           <li>Hello world</li>\r\n             \r\n         </ul>\r\n        \r\n       </nav>\r\n"
+                },
+                {
+                    "date": 1707145827037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n-           <li class>Hello world</li>\r\n+           <li className= 'text-white'>Hello world</li>\r\n            <li>Hello world</li>\r\n            <li>Hello world</li>\r\n             \r\n         </ul>\r\n"
+                },
+                {
+                    "date": 1707145842050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n-           <li className= 'text-white'>Hello world</li>\r\n+           <li className= ' font-bold text-white'>Hello world</li>\r\n            <li>Hello world</li>\r\n            <li>Hello world</li>\r\n             \r\n         </ul>\r\n"
+                },
+                {
+                    "date": 1707145880329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n-           <li className= ' font-bold text-white'>Hello world</li>\r\n+           <li className= ' font-bold text-white'>Dashboard</li>\r\n            <li>Hello world</li>\r\n            <li>Hello world</li>\r\n             \r\n         </ul>\r\n"
+                },
+                {
+                    "date": 1707145946950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n 'use client'\r\n \r\n import React,{useState} from 'react'\r\n+import { IoIosSpeedometer } from \"react-icons/io\";\r\n // import useRoutes from '@/app/hooks/useRoute' \r\n // import DesktopItem from './DesktopItem'\r\n // import { User } from '@prisma/client'\r\n // import Avatar from \"./Avatar\"\r\n"
+                },
+                {
+                    "date": 1707145958957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n-           <li className= ' font-bold text-white'>Dashboard</li>\r\n+           <li className= ' font-bold text-white'>Dashboard <IoIosSpeedometer /></li>\r\n            <li>Hello world</li>\r\n            <li>Hello world</li>\r\n             \r\n         </ul>\r\n"
+                },
+                {
+                    "date": 1707145981111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n-           <li className= ' font-bold text-white'>Dashboard <IoIosSpeedometer /></li>\r\n+           <li className= ' font-bold text-white'>Dashboard <IoIosSpeedometer clas /></li>\r\n            <li>Hello world</li>\r\n            <li>Hello world</li>\r\n             \r\n         </ul>\r\n"
+                },
+                {
+                    "date": 1707145983150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n-           <li className= ' font-bold text-white'>Dashboard <IoIosSpeedometer clas /></li>\r\n+           <li className= ' font-bold text-white'>Dashboard <IoIosSpeedometer className='' /></li>\r\n            <li>Hello world</li>\r\n            <li>Hello world</li>\r\n             \r\n         </ul>\r\n"
+                },
+                {
+                    "date": 1707145995259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n-           <li className= ' font-bold text-white'>Dashboard <IoIosSpeedometer className='h-10 w-' /></li>\r\n+           <li className= ' font-bold text-white'>Dashboard <IoIosSpeedometer className='h-10 w-10' /></li>\r\n            <li>Hello world</li>\r\n            <li>Hello world</li>\r\n             \r\n         </ul>\r\n"
+                },
+                {
+                    "date": 1707149612591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n      flex-col justify-between \">\r\n       \r\n       <nav className=\" mt-4 flex flex-col justify-between\">\r\n         <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n-           <\r\n+           <D\r\n             \r\n         </ul>\r\n        \r\n       </nav>\r\n"
+                }
+            ],
+            "date": 1707143276994,
+            "name": "Commit-0",
+            "content": "'use client'\r\n\r\nimport React,{useState} from 'react'\r\nimport useRoutes from '@/app/hooks/useRoute' \r\nimport DesktopItem from './DesktopItem'\r\nimport { User } from '@prisma/client'\r\nimport Avatar from \"./Avatar\"\r\n\r\ninterface DesktopSidebarProps{\r\n  currentUser:User\r\n}\r\nconst DesktopSidebar:React.FC<DesktopSidebarProps> = ({currentUser}) => {\r\n  const routes=useRoutes()\r\n  const [isOpen,setIsOpen]=useState(false)\r\n  console.log(currentUser)\r\n  return (\r\n    <div className=\"hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-20\r\n    xl:px-6 lg:overflow-y-auto lg:bg-white lg:border-r-[1px] lg:pb-4 lg:flex\r\n     lg:flex-col justify-between \">\r\n      \r\n      <nav className=\" mt-4 flex flex-col justify-between\">\r\n        <ul role='list' className=\"flex flex-col items-center space-y-1\">\r\n            {routes.map((item)=>(\r\n              <DesktopItem key={item.label} icon={item.icon} href={item.href} label={item.label} onClick={item.onClick} active={item.active}/>\r\n            ))}\r\n        </ul>\r\n       \r\n      </nav>\r\n\r\n      <nav className='mt-4 flex flex-col justify-between items-center'>\r\n            <div\r\n            className='cursor-pointer hover:opacity-75 trabsition'\r\n            onClick={()=>setIsOpen(true)}>\r\n                <Avatar user={currentUser}/>\r\n            </div>\r\n      </nav>\r\n\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default DesktopSidebar"
+        }
+    ]
+}

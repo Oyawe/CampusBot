@@ -1,0 +1,94 @@
+{
+    "sourceFile": "app/components/Background/Background.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1707121906069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707122039045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const Background = () => {\r\n   return (\r\n-    <div>Background</div>\r\n+    <div className=''>Background</div>\r\n   )\r\n }\r\n \r\n export default Background\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707122045009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const Background = () => {\r\n   return (\r\n-    <div className=''>Background</div>\r\n+    <div className='abs'>Background</div>\r\n   )\r\n }\r\n \r\n export default Background\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707122064068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\r\n \r\n const Background = () => {\r\n   return (\r\n-    <div className='abs'>Background</div>\r\n+    <div className='fixed'>\r\n+        <im\r\n+    </div>\r\n   )\r\n }\r\n \r\n export default Background\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707122071351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <im\r\n+        <img alt=''/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707122078311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img alt=''/>\r\n+        <img  alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707122121968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img  alt='image'/>\r\n+        <img src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707122134181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n+        <img className='' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707122143581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img className='' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n+        <img className='h-screen w-screen' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707122294556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img className='h-screen w-screen' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n+        <img className='h-screen w-screen back' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707122302559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img className='h-screen w-screen back' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n+        <img className='h-screen w-screen ' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707122429163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import React from 'react'\r\n+\r\n+const Background = () => {\r\n+  return (\r\n+    <div className='fixed'>\r\n+        <img className='h-screen w-screen  as' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default Background\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707122436672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,21 +2,10 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img className='h-screen w-screen  as' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n+        <img className='h-screen w-screen  aspect-auto' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n-export default Background\n-import React from 'react'\r\n-\r\n-const Background = () => {\r\n-  return (\r\n-    <div className='fixed'>\r\n-        <img className='h-screen w-screen ' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n export default Background\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707122831667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img className='h-screen w-screen  aspect-auto' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n+        <img className='h-screen w-screen  object-center' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707122880935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img className='h-screen w-screen  object-center' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n+        <img className='h-screen w-screen object  object-center' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707122892571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img className='h-screen w-screen object  object-center' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n+        <img className='h-screen w-screen  object-cover  object-center' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707122910095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img className='h-screen w-screen  object-cover  object-center' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n+        <img className='h-screen w-screen  object-cover  ' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707122950990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img className='h-screen w-screen  object-cover  ' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n+        <img className='h-screen w-screen  object-  ' sfirc=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707122966140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Background = () => {\r\n   return (\r\n     <div className='fixed'>\r\n-        <img className='h-screen w-screen  object-fill object ' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n+        <img className='h-screen w-screen  object-fill object- ' src=\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\" alt='image'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1707123789116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Background = () => {\r\n     const[imageNumber,setImageNumber]=useState(0)\r\n     const images:string[]=['https://bowen.edu.ng/wp-content/uploads/2023/04/Web-17-1024x683.jpg?lm=643E975C',\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-31.jpg?lm=643E9771\",\"https://bowen.edu.ng/wp-content/uploads/2023/04/faith-1024x682.png?lm=643FE159\",\"https://bowen.edu.ng/wp-content/uploads/2023/04/sport-1024x683.png?lm=643FE1AD\",\"https://bowen.edu.ng/wp-content/uploads/2023/04/Web-5-1024x683.jpg?lm=643E77EF\"]\r\n-    \r\n+    use\r\n     return (\r\n \r\n     <div className='fixed'>\r\n         <img className='h-screen w-screen  object-cover  ' src={images[4]} alt='image'/>\r\n"
+                }
+            ],
+            "date": 1707121906069,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Background = () => {\r\n  return (\r\n    <div>Background</div>\r\n  )\r\n}\r\n\r\nexport default Background"
+        }
+    ]
+}

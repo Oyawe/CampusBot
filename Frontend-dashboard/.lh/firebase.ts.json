@@ -1,0 +1,26 @@
+{
+    "sourceFile": "firebase.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1707115028389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707115152486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,11 @@\n   measurementId: \"G-RHPGTGVQ9V\"\r\n };\r\n \r\n // Initialize Firebase\r\n-const app = initializeApp(firebaseConfig);\r\n-const analytics = getAnalytics(app);\n\\ No newline at end of file\n+const app = !getApps.length ?  initializeApp(firebaseConfig) : getApp();\r\n+// const analytics = getAnalytics(app);\r\n+const auth=getAuth(app)\r\n+const db=getFirestore(app)\r\n+const storage=getStorage(app);\r\n+\r\n+export {auth,db,storage,app}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707115170886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n // Import the functions you need from the SDKs you need\r\n-import { initializeApp } from \"firebase/app\";\r\n+import { initializeApp,getApp,getApps } from \"firebase/app\";\r\n import { getAnalytics } from \"firebase/analytics\";\r\n+import {getAuth} from \"firebase/auth\"\r\n+import {getFirestore} from \"firebase/firestore\"\r\n+import {getStorage} from \"firebase/storage\" \r\n // TODO: Add SDKs for Firebase products that you want to use\r\n // https://firebase.google.com/docs/web/setup#available-libraries\r\n \r\n // Your web app's Firebase configuration\r\n"
+                }
+            ],
+            "date": 1707115028389,
+            "name": "Commit-0",
+            "content": "// Import the functions you need from the SDKs you need\r\nimport { initializeApp } from \"firebase/app\";\r\nimport { getAnalytics } from \"firebase/analytics\";\r\n// TODO: Add SDKs for Firebase products that you want to use\r\n// https://firebase.google.com/docs/web/setup#available-libraries\r\n\r\n// Your web app's Firebase configuration\r\n// For Firebase JS SDK v7.20.0 and later, measurementId is optional\r\nconst firebaseConfig = {\r\n  apiKey: \"AIzaSyAsL39elYAX_4AIcCw1uJSkslGMrDUGiCw\",\r\n  authDomain: \"sshub-1cc22.firebaseapp.com\",\r\n  projectId: \"sshub-1cc22\",\r\n  storageBucket: \"sshub-1cc22.appspot.com\",\r\n  messagingSenderId: \"1020002056408\",\r\n  appId: \"1:1020002056408:web:e372ca47ba9b7461123fad\",\r\n  measurementId: \"G-RHPGTGVQ9V\"\r\n};\r\n\r\n// Initialize Firebase\r\nconst app = initializeApp(firebaseConfig);\r\nconst analytics = getAnalytics(app);"
+        }
+    ]
+}

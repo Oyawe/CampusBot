@@ -1,0 +1,42 @@
+{
+    "sourceFile": "app/dashboard/layout.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1707142642583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707142648899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,5 @@\n-import getConversations from \"../actions/getConversations\";\r\n-import getUsers from \"../actions/getUsers\";\r\n-import Sidebar from \"../components/sidebar/Sidebar\";\r\n-import ConversationList from \"./components/ConversationList\";\r\n-import { FullConversationType } from '@/app/types'\r\n+\r\n export default async function ConversationsLayout({\r\n   children\r\n }: {\r\n   children: React.ReactNode,\r\n"
+                },
+                {
+                    "date": 1707142655713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n   children\r\n }: {\r\n   children: React.ReactNode,\r\n }) {\r\n-  const conversations:any = await getConversations();\r\n-  const users = await getUsers();\r\n+  \r\n \r\n   return (\r\n     \r\n     <Sidebar>\r\n"
+                },
+                {
+                    "date": 1707142691097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   \r\n \r\n   return (\r\n     \r\n-    <Sidebar>\r\n+    \r\n       <div className=\"h-full\">\r\n         <ConversationList \r\n           // users={users} \r\n           // title=\"Messages\" \r\n"
+                },
+                {
+                    "date": 1707142700937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,14 +9,10 @@\n   return (\r\n     \r\n     \r\n       <div className=\"h-full\">\r\n-        <ConversationList \r\n-          // users={users} \r\n-          // title=\"Messages\" \r\n-          initialItems={conversations}\r\n-        />\r\n+       \r\n+        \r\n         {children}\r\n       </div>\r\n-    </Sidebar>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707142713340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,9 @@\n }) {\r\n   \r\n \r\n   return (\r\n-    \r\n-    \r\n       <div className=\"h-full\">\r\n-       \r\n-        \r\n         {children}\r\n       </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707143575726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import Sidebar from \"./components/Sidebar\";\r\n \r\n export default async function ConversationsLayout({\r\n   children\r\n }: {\r\n@@ -6,9 +7,9 @@\n }) {\r\n   \r\n \r\n   return (\r\n-    <Sideba\r\n+    <Sidebar\r\n       <div className=\"h-full\">\r\n         {children}\r\n       </div>\r\n   );\r\n"
+                }
+            ],
+            "date": 1707142642583,
+            "name": "Commit-0",
+            "content": "import getConversations from \"../actions/getConversations\";\r\nimport getUsers from \"../actions/getUsers\";\r\nimport Sidebar from \"../components/sidebar/Sidebar\";\r\nimport ConversationList from \"./components/ConversationList\";\r\nimport { FullConversationType } from '@/app/types'\r\nexport default async function ConversationsLayout({\r\n  children\r\n}: {\r\n  children: React.ReactNode,\r\n}) {\r\n  const conversations:any = await getConversations();\r\n  const users = await getUsers();\r\n\r\n  return (\r\n    \r\n    <Sidebar>\r\n      <div className=\"h-full\">\r\n        <ConversationList \r\n          // users={users} \r\n          // title=\"Messages\" \r\n          initialItems={conversations}\r\n        />\r\n        {children}\r\n      </div>\r\n    </Sidebar>\r\n  );\r\n}"
+        }
+    ]
+}

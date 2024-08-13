@@ -1,0 +1,18 @@
+{
+    "sourceFile": "context/ToastContext.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1707128747441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1707128747441,
+            "name": "Commit-0",
+            "content": "\"use client\"\r\nimport { Toaster } from \"react-hot-toast\"\r\nconst ToasterContext=()=>{\r\n    return(\r\n        <Toaster/>\r\n    )\r\n}\r\nexport default ToasterContext"
+        }
+    ]
+}

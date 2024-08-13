@@ -1,0 +1,86 @@
+{
+    "sourceFile": "app/hooks/useAuthentication.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1707129488935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707129494502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n const Signup=async()=>{\r\n   try{\r\n     createUserWithEmailAndPassword(email, password)\r\n     if(error)  return 'error'\r\n-    return\r\n+    return \"success\"\r\n   }catch(e:any){\r\n     return 'error'\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1707129504289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n \r\n const Signin=async()=>{\r\n   try{\r\n   signInWithEmailAndPassword(email, password)\r\n-  if(error) return 'error'\r\n+  if(error2) return 'error'\r\n   }\r\n   catch(e){\r\n     return 'error'\r\n   }\r\n"
+                },
+                {
+                    "date": 1707129513167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,9 @@\n const Signin=async()=>{\r\n   try{\r\n   signInWithEmailAndPassword(email, password)\r\n   if(error2) return 'error'\r\n+  return \"success\"\r\n   }\r\n   catch(e){\r\n     return 'error'\r\n   }\r\n"
+                },
+                {
+                    "date": 1707129523260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n \r\n const Signup=async()=>{\r\n   try{\r\n     createUserWithEmailAndPassword(email, password)\r\n-    if(error)  return 'error'\r\n+    if(error)  return error\r\n     return \"success\"\r\n   }catch(e:any){\r\n     return 'error'\r\n   }\r\n"
+                },
+                {
+                    "date": 1707129535803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,16 +32,16 @@\n     createUserWithEmailAndPassword(email, password)\r\n     if(error)  return error\r\n     return \"success\"\r\n   }catch(e:any){\r\n-    return 'error'\r\n+    return error\r\n   }\r\n }\r\n \r\n const Signin=async()=>{\r\n   try{\r\n   signInWithEmailAndPassword(email, password)\r\n-  if(error2) return 'error'\r\n+  if(error2) return error2\r\n   return \"success\"\r\n   }\r\n   catch(e){\r\n     return 'error'\r\n"
+                },
+                {
+                    "date": 1707129545255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n   if(error2) return error2\r\n   return \"success\"\r\n   }\r\n   catch(e){\r\n-    return 'error'\r\n+    return error2\r\n   }\r\n }\r\n \r\n  return {Signin,Signup}\r\n"
+                },
+                {
+                    "date": 1707129652018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n ] = useSignInWithEmailAndPassword(auth);\r\n \r\n const Signup=async()=>{\r\n   try{\r\n-    createUserWithEmailAndPassword(email, password)\r\n+    await createUserWithEmailAndPassword(email, password)\r\n     if(error)  return error\r\n     return \"success\"\r\n   }catch(e:any){\r\n     return error\r\n"
+                },
+                {
+                    "date": 1707129659415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,55 @@\n+'use client'\r\n+import { Variant } from '@/app/components/modal/Modal';\r\n+import { auth } from '@/firebase';\r\n+import React from 'react'\r\n+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';\r\n+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';\r\n+\r\n+interface Props{\r\n+  email:string;\r\n+  password:string;\r\n+  username:string\r\n+  variant:Variant\r\n+}\r\n+const useAuthentication = ({email,password,username,variant}:Props) => {\r\n+\r\n+  const [\r\n+  createUserWithEmailAndPassword,\r\n+  user,\r\n+  loading,\r\n+  error,\r\n+] = useCreateUserWithEmailAndPassword(auth);\r\n+\r\n+const [\r\n+  signInWithEmailAndPassword,\r\n+  user2,\r\n+  loading2,\r\n+  error2,\r\n+] = useSignInWithEmailAndPassword(auth);\r\n+\r\n+const Signup=async()=>{\r\n+  try{\r\n+    await createUserWithEmailAndPassword(email, password)\r\n+    if(error)  return error\r\n+    return \"success\"\r\n+  }catch(e:any){\r\n+    return error\r\n+  }\r\n+}\r\n+\r\n+const Signin=async()=>{\r\n+  try{\r\n+  await signInWithEmailAndPassword(email, password)\r\n+  if(error2) return error2\r\n+  return \"success\"\r\n+  }\r\n+  catch(e){\r\n+    return error2\r\n+  }\r\n+}\r\n+\r\n+ return {Signin,Signup}\r\n+  \r\n+}\r\n+\r\n+export default useAuthentication\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707141316131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n \r\n const Signup=async()=>{\r\n   try{\r\n     await createUserWithEmailAndPassword(email, password)\r\n+    \r\n     if(error)  return error\r\n     return \"success\"\r\n   }catch(e:any){\r\n     return error\r\n@@ -51,60 +52,5 @@\n  return {Signin,Signup}\r\n   \r\n }\r\n \r\n-export default useAuthentication\n-'use client'\r\n-import { Variant } from '@/app/components/modal/Modal';\r\n-import { auth } from '@/firebase';\r\n-import React from 'react'\r\n-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';\r\n-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';\r\n-\r\n-interface Props{\r\n-  email:string;\r\n-  password:string;\r\n-  username:string\r\n-  variant:Variant\r\n-}\r\n-const useAuthentication = ({email,password,username,variant}:Props) => {\r\n-\r\n-  const [\r\n-  createUserWithEmailAndPassword,\r\n-  user,\r\n-  loading,\r\n-  error,\r\n-] = useCreateUserWithEmailAndPassword(auth);\r\n-\r\n-const [\r\n-  signInWithEmailAndPassword,\r\n-  user2,\r\n-  loading2,\r\n-  error2,\r\n-] = useSignInWithEmailAndPassword(auth);\r\n-\r\n-const Signup=async()=>{\r\n-  try{\r\n-    await createUserWithEmailAndPassword(email, password)\r\n-    if(error)  return error\r\n-    return \"success\"\r\n-  }catch(e:any){\r\n-    return error\r\n-  }\r\n-}\r\n-\r\n-const Signin=async()=>{\r\n-  try{\r\n-  signInWithEmailAndPassword(email, password)\r\n-  if(error2) return error2\r\n-  return \"success\"\r\n-  }\r\n-  catch(e){\r\n-    return error2\r\n-  }\r\n-}\r\n-\r\n- return {Signin,Signup}\r\n-  \r\n-}\r\n-\r\n export default useAuthentication\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707141352162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n \r\n const Signup=async()=>{\r\n   try{\r\n     await createUserWithEmailAndPassword(email, password)\r\n-    \r\n+    if(loading)\r\n     if(error)  return error\r\n     return \"success\"\r\n   }catch(e:any){\r\n     return error\r\n"
+                },
+                {
+                    "date": 1707141365819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n \r\n const Signup=async()=>{\r\n   try{\r\n     await createUserWithEmailAndPassword(email, password)\r\n-    if(loading)\r\n+    if(loading) return loading\r\n     if(error)  return error\r\n     return \"success\"\r\n   }catch(e:any){\r\n     return error\r\n"
+                },
+                {
+                    "date": 1707141447889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n \r\n const Signup=async()=>{\r\n   try{\r\n     await createUserWithEmailAndPassword(email, password)\r\n-    if(loading) return loading\r\n+    // if(loading) return loading\r\n     if(error)  return error\r\n     return \"success\"\r\n   }catch(e:any){\r\n     return error\r\n"
+                },
+                {
+                    "date": 1707193735026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,9 @@\n   try{\r\n     await createUserWithEmailAndPassword(email, password)\r\n     // if(loading) return loading\r\n     if(error)  return error\r\n+    \r\n     return \"success\"\r\n   }catch(e:any){\r\n     return error\r\n   }\r\n"
+                },
+                {
+                    "date": 1707193814094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n import React from 'react'\r\n import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';\r\n import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';\r\n \r\n+\r\n+\r\n interface Props{\r\n   email:string;\r\n   password:string;\r\n   username:string\r\n@@ -31,9 +33,9 @@\n   try{\r\n     await createUserWithEmailAndPassword(email, password)\r\n     // if(loading) return loading\r\n     if(error)  return error\r\n-    \r\n+\r\n     return \"success\"\r\n   }catch(e:any){\r\n     return error\r\n   }\r\n"
+                },
+                {
+                    "date": 1707193822738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,12 @@\n import React from 'react'\r\n import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';\r\n import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';\r\n \r\n+import { doc, setDoc } from \"firebase/firestore\"; \r\n \r\n \r\n+\r\n interface Props{\r\n   email:string;\r\n   password:string;\r\n   username:string\r\n"
+                },
+                {
+                    "date": 1707193835683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n     await createUserWithEmailAndPassword(email, password)\r\n     // if(loading) return loading\r\n     if(error)  return error\r\n     // Add a new document in collection \"cities\"\r\n-await setDoc(doc(db, \"cities\", \"LA\"), {\r\n+  await setDoc(doc(db, \"cities\", \"LA\"), {\r\n   name: \"Los Angeles\",\r\n   state: \"CA\",\r\n   country: \"USA\"\r\n });\r\n"
+                },
+                {
+                    "date": 1707193854761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n     await createUserWithEmailAndPassword(email, password)\r\n     // if(loading) return loading\r\n     if(error)  return error\r\n     // Add a new document in collection \"cities\"\r\n-  await setDoc(doc(db, \"cities\", \"LA\"), {\r\n+  await setDoc(doc(db, \"ci\", \"LA\"), {\r\n   name: \"Los Angeles\",\r\n   state: \"CA\",\r\n   country: \"USA\"\r\n });\r\n"
+                }
+            ],
+            "date": 1707129488935,
+            "name": "Commit-0",
+            "content": "'use client'\r\nimport { Variant } from '@/app/components/modal/Modal';\r\nimport { auth } from '@/firebase';\r\nimport React from 'react'\r\nimport { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';\r\nimport { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';\r\n\r\ninterface Props{\r\n  email:string;\r\n  password:string;\r\n  username:string\r\n  variant:Variant\r\n}\r\nconst useAuthentication = ({email,password,username,variant}:Props) => {\r\n\r\n  const [\r\n  createUserWithEmailAndPassword,\r\n  user,\r\n  loading,\r\n  error,\r\n] = useCreateUserWithEmailAndPassword(auth);\r\n\r\nconst [\r\n  signInWithEmailAndPassword,\r\n  user2,\r\n  loading2,\r\n  error2,\r\n] = useSignInWithEmailAndPassword(auth);\r\n\r\nconst Signup=async()=>{\r\n  try{\r\n    createUserWithEmailAndPassword(email, password)\r\n    if(error)  return 'error'\r\n    return\r\n  }catch(e:any){\r\n    return 'error'\r\n  }\r\n}\r\n\r\nconst Signin=async()=>{\r\n  try{\r\n  signInWithEmailAndPassword(email, password)\r\n  if(error) return 'error'\r\n  }\r\n  catch(e){\r\n    return 'error'\r\n  }\r\n}\r\n\r\n return {Signin,Signup}\r\n  \r\n}\r\n\r\nexport default useAuthentication"
+        }
+    ]
+}
