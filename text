@@ -1,0 +1,2 @@
+#to start the server: uvicorn main:app
+# ngrok http http://127.0.0.1:8000
